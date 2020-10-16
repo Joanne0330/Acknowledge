@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { IconButton } from 'react-native-paper';
 
 import { connect } from 'react-redux'
 import Firebase from '../../config/Firebase'
@@ -21,15 +22,20 @@ class Profile extends React.Component {
         return (
             <>
                 <Header titleText='Access' />
+                <IconButton
+                  icon='logout'
+                  size={25}
+                  color='white'
+                  onPress={this.handleSignout}
+                  style={styles.iconButton}
+                />
                 <View style={styles.container}>
                     <Text>Profile Screen</Text>
                     <Text>{this.props.user.email}</Text>
                     <TouchableOpacity style={styles.button} onPress={this.moveStack}>
                         <Text style={styles.buttonText}>Go to main app</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.button} onPress={this.handleSignout}>
-                        <Text style={styles.buttonText}>Log out</Text>
-                    </TouchableOpacity>
+                  
                 </View>
             </>
         )
@@ -58,7 +64,14 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: '#fff'
-    }
+    },
+    iconButton: {
+      backgroundColor: 'rgba(46, 113, 102, 0.8)',
+      position: 'absolute',
+      right: 0,
+      top: 40,
+      margin: 10
+    },
 })
 
 const mapStateToProps = state => {
