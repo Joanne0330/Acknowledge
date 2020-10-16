@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import { StyleSheet, View, Dimensions} from 'react-native';
-import { IconButton } from 'react-native-paper';
+import { BottomNavigation, IconButton } from 'react-native-paper';
 
-import Header from '../components/Header'
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
 
 import { BarChart } from "react-native-chart-kit";
 
@@ -75,6 +76,7 @@ function GraphAchievements({ navigation }) {
           chartConfig={chartConfig}
         />
       </View>
+      <BottomNav />
     </>
   )
 }

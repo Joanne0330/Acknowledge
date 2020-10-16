@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
-import { Text, FAB, List, IconButton } from 'react-native-paper';
+import { Text, FAB, List } from 'react-native-paper';
 
+import BottomNav from "../components/BottomNav"
 import Header from '../components/Header'
 import Firebase from '../../config/Firebase'
 

@@ -4,6 +4,7 @@ import { IconButton, TextInput, FAB, Text } from 'react-native-paper';
 
 import Checkbox from "../components/checkbox";
 
+
 import Header from '../components/Header'
 
 function AddAchievement({ navigation }) {

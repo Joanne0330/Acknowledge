@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Appbar, Title } from 'react-native-paper';
 
+
 function Header({ titleText }) {
   return(
     <Appbar.Header style={styles.headerContainer}>

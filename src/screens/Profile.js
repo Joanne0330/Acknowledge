@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import Firebase from '../../config/Firebase'
 
 import Header from '../components/Header'
+import BottomNav from "../components/BottomNav"
 
 class Profile extends React.Component {
 
