@@ -17,22 +17,13 @@ function ViewAchievements({ navigation }) {
   const addAchievement = achievement => dispatch(addachievement(achievement))
   const deleteAchievement = id => dispatch(deleteachievement(id))
 
-  const handleSignout = () => {
-    Firebase.auth().signOut()
-    navigation.navigate('Login')
-  }
+
 
   console.log(achievements)
   return (
     <>
       <Header titleText='Access' />
-      <IconButton
-        icon='logout'
-        size={25}
-        color='white'
-        onPress={handleSignout}
-        style={styles.iconButton}
-      />
+
       <View style={styles.container}>
         {achievements.length === 0 ? (
           <View style={styles.titleContainer}>
@@ -107,13 +98,6 @@ const styles = StyleSheet.create({
   },
   listTitle: {
     fontSize: 20
-  },
-  iconButton: {
-    backgroundColor: 'rgba(46, 113, 102, 0.8)',
-    position: 'absolute',
-    right: 0,
-    top: 40,
-    margin: 10
   },
 })
 
