@@ -22,6 +22,7 @@
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "firebase": "^7.21.1",
+    "jest-circus": "^26.6.3",
     "lodash.remove": "^4.7.0",
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
@@ -53,6 +54,16 @@
     "jest-expo": "^39.0.0",
     "react-native-testing-library": "^6.0.0",
     "react-test-renderer": "^17.0.1"
+  },
+  "detox": {
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim": {
+        "binaryPath": "bin/Exponent.app",
+        "type": "ios.simulator",
+        "name": "iPhone 11"
+      }
+    }
   },
   "private": true
 }
