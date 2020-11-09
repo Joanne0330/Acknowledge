@@ -1,3 +1,5 @@
+const { reloadApp } = require('detox-expo-helpers');
+
 describe('Example', () => {
   beforeEach(async () => {
     await reloadApp();
@@ -8,8 +10,8 @@ describe('Example', () => {
   });
 
   it('should show hello screen after tap', async () => {
-    await element(by.id('hello_button')).tap();
-    await expect(element(by.text('Hello!!!'))).toBeVisible();
+    await element(by.id('sign_up_page_button')).tap();
+    await expect(element(by.text('Create an account today'))).toBeVisible();
   });
 
   it('should show world screen after tap', async () => {

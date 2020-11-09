@@ -25,7 +25,7 @@ class Login extends React.Component {
       <>
       <Header titleText='Access' />
         <View style={styles.container}>
-          <Text style={styles.title}>Welcome to Access</Text>
+          <Text testID="welcome" style={styles.title}>Welcome to Access</Text>
           <TextInput
             style={styles.inputBox}
             value={this.props.user.email}
@@ -43,7 +43,7 @@ class Login extends React.Component {
           <TouchableOpacity style={styles.button} onPress={() => this.props.login()}>
             <Text style={styles.buttonText}>Login</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Signup')}>
+          <TouchableOpacity testID="sign_up_page_button" style={styles.button} onPress={() => this.props.navigation.navigate('Signup')}>
             <Text style={styles.buttonTextLong}>Don't have an account yet? {"\n"} Sign up</Text>
           </TouchableOpacity>
         </View>
